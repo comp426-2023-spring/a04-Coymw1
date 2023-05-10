@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "server endpoints",
   "main": "server.js",
+  "type": "module",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "\"node server.js --port-5555\"",
+    "test": "node server.js --port-5555",
     "start": "node server.js"
   },
   "repository": {
@@ -25,6 +26,5 @@
     "minimist": "^1.2.8",
     "node": "^20.1.0",
     "rpsls": "^0.9.0"
-  },
-  "type": "module"
+  }
 }
