@@ -15,10 +15,7 @@ app.get('/app', (req, res)=>{
     res.status(200).send("200 OK");
 });
 
-//404 for undefined endpoints
-app.get('*', (req, res)=> {
-    res.status(404).send('404 NOT FOUND');
-});
+
 
 //endpoint for rps
 app.get('/app/rps', (req, res) =>{
@@ -58,6 +55,11 @@ app.get('/app/rps/play/:shot/', (req, res)=>{
 //rpsls with data from URL
 app.get('/app/rpsls/play/:shot/', (req, res)=>{
     res.status(200).send(JSON.stringify(rpsls(req.params.shot)));
+});
+
+//404 for undefined endpoints
+app.get('*', (req, res)=> {
+    res.status(404).send('404 NOT FOUND');
 });
 
 //Start server, listen to port || 5000
