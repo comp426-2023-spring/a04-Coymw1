@@ -4,9 +4,6 @@
   "description": "server endpoints",
   "main": "server.js",
   "type": "module",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "test": "node server.js --port-5555",
     "start": "node server.js"
