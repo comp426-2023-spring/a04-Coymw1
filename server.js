@@ -32,12 +32,12 @@ app.get('/app/rpsls', (req, res) =>{
 
 //rps with user input
 app.get('/app/rps/play/', (req, res)=>{
-    res.status(200).send(rps(req.body.shot));
+    res.status(200).send(rps(req.query.shot));
 });
 
 //rpsls with user input
 app.get('/app/rpsls/play/', (req, res)=>{
-    res.status(200).send(rpsls(req.body.shot));
+    res.status(200).send(rpsls(req.query.shot));
 });
 
 //post to send data for rps
