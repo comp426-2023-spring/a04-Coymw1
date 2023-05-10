@@ -5,10 +5,11 @@ import express from 'express';
 import minimist from 'minimist';
 
 
-const port = argv.port || 5000;
 
 var argv = minimist(process.argv.slice(2));
 var app = express();
+
+const port = argv.port || 5000;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
