@@ -22,42 +22,42 @@ app.get('*', (req, res)=> {
 
 //endpoint for rps
 app.get('/app/rps', (req, res) =>{
-    res.send(JSON.stringify(rps()));
+    res.status(200).send(JSON.stringify(rps()));
 });
 
 //endpoint for rpsls
 app.get('/app/rpsls', (req, res) =>{
-    res.send(JSON.stringify(rpsls()));
+    res.status(200).send(JSON.stringify(rpsls()));
 });
 
 //rps with user input
 app.get('/app/rps/play/', (req, res)=>{
-    res.send(rps(req.body.shot));
+    res.status(200).send(rps(req.body.shot));
 });
 
 //rpsls with user input
 app.get('/app/rpsls/play/', (req, res)=>{
-    res.send(rpsls(req.body.shot));
+    res.status(200).send(rpsls(req.body.shot));
 });
 
 //post to send data for rps
 app.post('/app/rps/play/', (req, res)=>{
-    res.send(rps(req.body.shot));
+    res.status(200).send(rps(req.body.shot));
 });
 
 //post to send data for rpsls
 app.post('/app/rpsls/play/', (req, res)=>{
-    res.send(rpsls(req.body.shot));
+    res.status(200).send(rpsls(req.body.shot));
 });
 
 //rps wiht data from url
 app.get('/app/rps/play/:shot/', (req, res)=>{
-    res.send(JSON.stringify(rps(req.params.shot)));
+    res.status(200).send(JSON.stringify(rps(req.params.shot)));
 });
 
 //rpsls with data from URL
 app.get('/app/rpsls/play/:shot/', (req, res)=>{
-    res.send(JSON.stringify(rpsls(req.params.shot)));
+    res.status(200).send(JSON.stringify(rpsls(req.params.shot)));
 });
 
 //Start server, listen to port || 5000
