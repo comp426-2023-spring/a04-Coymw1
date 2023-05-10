@@ -21,12 +21,12 @@ app.get('/app', (req, res)=>{
 
 //endpoint for rps
 app.get('/app/rps', (req, res) =>{
-    res.status(200).send((rps()));
+    res.status(200).send(JSON.stringify(rps()));
 });
 
 //endpoint for rpsls
 app.get('/app/rpsls', (req, res) =>{
-    res.status(200).send((rpsls()));
+    res.status(200).send(JSON.stringify(rpsls()));
 });
 
 //rps with user input
@@ -51,12 +51,12 @@ app.post('/app/rpsls/play/', (req, res)=>{
 
 //rps with data from url
 app.get('/app/rps/play/:shot/', (req, res)=>{
-    res.status(200).send((rps(req.params.shot)));
+    res.status(200).send(JSON.stringify(rps(req.params.shot)));
 });
 
 //rpsls with data from URL
 app.get('/app/rpsls/play/:shot/', (req, res)=>{
-    res.status(200).send((rpsls(req.params.shot)));
+    res.status(200).send(JSON.stringify(rpsls(req.params.shot)));
 });
 
 //404 for undefined endpoints
